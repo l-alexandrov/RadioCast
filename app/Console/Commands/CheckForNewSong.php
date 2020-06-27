@@ -62,6 +62,7 @@ class CheckForNewSong extends Command
             $song = Song::updateOrCreate([
                 'artist_id' => $artist->id,
                 'genre_id' => $genre->id,
+                'album' => $xml->album,
                 'length' => $duration,
                 'name' => $current_song_title
             ]);

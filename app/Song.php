@@ -16,7 +16,7 @@ class Song extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'genre_id', 'artist_id', 'length'
+        'name', 'genre_id', 'artist_id', 'length', 'album'
     ];
 
     public function artist()
