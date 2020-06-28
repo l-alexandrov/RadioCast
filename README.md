@@ -11,9 +11,13 @@
 
 4. `php artisan migrate`
 
-5. `cp radio.example.xml ./storage/app/public/radio.xml`
+5. (Optional) `cp radio.example.xml ./storage/app/public/radio.xml`. Ajdust your XML API provider in `CheckForNewSong.php` instead.
+
+##Starting
+1. `php artisan check:newsong`
+2. `php artisan serve`
 
 
 ## :black_nib: License
 
-RadioCast is an small open-sourced software licensed under the [GNU (GPL-3.0) license](https://opensource.org/licenses/GPL-3.0).
+RadioCast is a small open-sourced software licensed under the [GNU (GPL-3.0) license](https://opensource.org/licenses/GPL-3.0).

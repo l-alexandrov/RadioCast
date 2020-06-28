@@ -5,8 +5,6 @@ namespace App\Events;
 use App\Song;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
-use Illuminate\Broadcasting\PresenceChannel;
-use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
@@ -46,8 +44,9 @@ class SongChanged implements ShouldBroadcast
             'name' => $this->song->name,
             'album' => $this->song->album,
             'performer' => $this->song->artist->name,
-            'length' => $this->song->length,
             'genre' => $this->song->genre->name,
         ];
     }
+
+    protected Song $song;
 }
