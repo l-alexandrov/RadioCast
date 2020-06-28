@@ -13,7 +13,7 @@
 
 5. (Optional) `cp radio.example.xml ./storage/app/public/radio.xml`. Ajdust your XML API provider in `CheckForNewSong.php` instead.
 
-##Starting
+## Starting
 1. `php artisan check:newsong`
 2. `php artisan serve`
 
