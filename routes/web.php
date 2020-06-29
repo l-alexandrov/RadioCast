@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'TickerController@ticker');
-Route::get('/stats', 'StatisticsController@home');
+Route::get('/', ['as' => 'home', 'uses' => 'TickerController@ticker']);
+Route::get('/stats', ['as' => 'stats', 'uses' => 'StatisticsController@home']);
 Route::post('/stats', ['as' => 'statsPost', 'uses' => 'StatisticsController@stats']);
